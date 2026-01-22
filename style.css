@@ -1,7 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+
 body   {
     background-image: url("./background.jpeg");
+ 
     
+}
+
+h1 {font-family: "Lavishly Yours", cursive;
+  font-weight: 2000;
+  font-style: normal;
+font-size: 70px;
+color: #a9bbb5}
+
+h2  {color: #a9bbb5}
+
+h3 {color: #a9bbb5;
+font-weight: 200;}
+
+p {color: #000000;
+    background-color: rgba(186, 202, 202, 0.56)
+}
+
+a {color: #a9bbb5
     
-    
-    
+}
+
+div.overlay{
+    position: fixed;
+    top: -300px;
+    z-index: -1;
+}
+
+div.column{
+    display: flex;
+}
+
+div.row{
+    flex: 50%;
 }
