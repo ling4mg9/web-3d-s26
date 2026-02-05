@@ -1,0 +1,12 @@
+body{
+    background-image: url(night_sea.jpeg); 
+    background-repeat: no-repeat;
+    background-size: stretch;
+    background-attachment: scroll;
+    
+}
+
+h1{
+    color: #b0ebff
+    
+}
