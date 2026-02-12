@@ -63,6 +63,25 @@ function draw() {
 }
 
 function keyPressed() {
-  if (key === '1') lightIntensity = 50;
-  if (key === '2') lightIntensity = 150;
-  if (key === '3') lightIntensity = 255;}
+    if (key == "z") {
+        if (gapNum >= 50) {
+            movingCheck = true;
+        } else if (gapNum <= 0) {
+            movingCheck = false;
+        }
+    } else if (key == "w") {
+        if (wireCheck) {
+            wireCheck = false;
+        } else if (!wireCheck) {
+            wireCheck = true;
+        }
+    } else if (key == "c") {
+        r = random(255);
+        g = random(255);
+        b = random(255);
+    } else if (key == "l") {
+        rl = random(255);
+        gl = random(255);
+        bl = random(255);
+    }
+}
