@@ -2,9 +2,9 @@ let myShape;
 let x;
 let changeDirection;
 let wireCheck = false;
-let rl = 255;
-let gl = 0;
-let bl = 255;
+let rl;
+let gl;
+let bl;
 
 function preload() {
     myShape = loadModel("tower5.obj", true);
@@ -19,25 +19,22 @@ function setup() {
 }
 
 function draw() {
-    fill(255);
+    fill(rl,gl,bl);
     ellipse(width / 2, height / 4, 100, 80);
     fill(0);
     ellipse(width / 2, height / 4, 20, 10);
 
     directionalLight(
-        255,
-        85,
-        0, // color
-        1,
-        1,
-        02 // direction
+      rl,gl,bl,
+        //1,
+        //1,
+        //02 // direction
     );
-    background(222, 231, 216);
+    background(0, 231, 216);
     orbitControl();
 
     fill(91, 28, 12);
 
-    //圆环位置前后移动
     push();
     if (x > 200) {
         changeDirection = true;
