@@ -51,7 +51,7 @@ function draw() {
     }
     
     
-    rotateY(rotNum * 0.75);
+    rotateY(rotNum * 0.45);
     if (!freezeCheck) {
         rotNum++;
     }
