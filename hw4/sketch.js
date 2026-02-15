@@ -5,28 +5,65 @@ let wireCheck = false;
 let rl = 255;
 let gl = 255;
 let bl = 255;
+let cameraSwitch = true;
+let freezeCheck = false;
+let rotNum = 0;
+let gapNum = 50;
+let movingCheck = false;
+var song;
 //let music;
+
+
 
 function preload() {
     myShape = loadModel("tower5.obj", true);
     myTexture = loadImage("white texture.jpg");
     myTexture2 = loadImage("concrete texture.jpeg");
+    song=loadSound('music.mp3');
 }
 
 function setup() {
+      rectMode(CENTER);
+    
     let canvas = createCanvas(600, 400, WEBGL);
     x = 1;
     changeDirection = false;
     angleMode(DEGREES);
     // canvas.parent("sketch-holder");
 
-    let button = createButton("screenshot");
-    // button.parent("button-holder");
-    button.mousePressed(saveScreen);
+
+    
+    let buttonB = createButton('Play Music');
+    buttonB.mousePressed(playMusic);
 }
 
 function draw() {
-      rotateY(frameCount * 0.2);
+// rotateX(rotNum);
+    
+        if (movingCheck) {
+        if (gapNum > 0) {
+            gapNum--;
+        }
+    } else if (!movingCheck) {
+        if (gapNum < 50) {
+            gapNum++;
+        }
+    }
+    
+    
+    rotateY(rotNum * 0.75);
+    if (!freezeCheck) {
+        rotNum++;
+    }
+    
+        if(cameraSwitch) {
+        perspective();
+    } else if (!cameraSwitch) {
+        ortho();
+    }
+    
+    
+      //rotateY(frameCount * 0.2);
     fill(rl, gl, bl);
     ellipse(width / 2, height / 4, 100, 80);
     fill(0);
@@ -87,9 +124,33 @@ function keyPressed() {
         gl = random(255);
         bl = random(255);
          wireCheck = false;
+        cameraSwitch = true;
+    }
+    else if (key == "p") {
+       if (cameraSwitch) {
+            cameraSwitch = false;
+        } else if (!cameraSwitch) {
+            cameraSwitch = true;
+        } 
     }
 }
 
-function saveScreen() {
-    save(canvas, "tower.png");
+function mousePressed() {
+    if (freezeCheck) {
+        freezeCheck = false;
+    } else if (!freezeCheck) {
+        freezeCheck = true;
+    }
 }
+
+
+function playMusic(){
+     userStartAudio();
+  if ( song.isPlaying() ) { 
+    song.pause();
+  } else {
+    song.play();
+  }
+
+}
+
