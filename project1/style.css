@@ -7,19 +7,54 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
 }
+
+
+
+
+.intro{
+  width: 1020px;  
+  height: 240px;
+  margin: 0;    
+  background: rgba(91,28,12,0.35);
+  border-radius: 9px;
+  padding: 16px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro summary{
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 21px;
+}
+
+.intro p{
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+.intro arrow {
+  transition: transform 0.2s ease;
+  
+  
+}
+
+
 
 .listPanel{
   position: relative;
   width: 60px;       
   height: 80vh;
-  margin: 10vh 0 0 60px;  /*top,right,bottom,left*/ 
-  /*overflow-y: auto;     moving list */
+  margin: 10vh 0 0 60px;  
+  /*top,right,bottom,left*/ 
+
 }
 
 .charCard{
   display: grid;
-  /*grid-template-columns: 80px 1fr; */
   gap: 12px;
   align-items: center;
   margin-bottom: 14px;
@@ -53,9 +88,6 @@ body {
   position:absolute;
   left:170px;
   top:180px;
-  
-  
-  
 }
 
 .language{
@@ -67,5 +99,5 @@ body {
   position:absolute;
   right:20px;
   top:20px;
-  
 }
+
