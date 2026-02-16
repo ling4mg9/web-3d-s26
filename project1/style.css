@@ -1,0 +1,44 @@
+body {
+    background-color: #ECEEE3
+}
+
+.nv1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.listPanel{
+  position: relative;
+  width: 60px;       
+  height: 80vh;
+  margin: 10vh 0 0 60px;  /*top,right,bottom,left*/ 
+  /*overflow-y: auto;     moving list */
+}
+
+.charCard{
+  display: grid;
+  /*grid-template-columns: 80px 1fr; */
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.charBox{
+  height: 25px;
+  border-radius: 7px;
+  background: rgba(255,255,255,0.65);
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+}
+
+.infoBox{
+  height: 60px;
+  border-radius: 9px;
+  background: rgba(255,255,255,0.45);
+  padding: 20px 20px;
+  font-size: 50px;
+
+}
