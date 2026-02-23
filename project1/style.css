@@ -1,39 +1,53 @@
+@import url(https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Felipa&family=Inika:wght@400;700&display=swap');
+
+@font-face {
+  font-family: GenWanMin; 
+  src: url('./GenWanMin.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
     background-color: #ECEEE3
 }
 
-.nv1 {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
+
+h1{
+  font-family: "Italianno", cursive;
+  font-size: 52px;
+  text-align: center;
+  margin-bottom: -5px;
 }
 
-
-
-
-.intro{
-  width: 1020px;  
-  height: 240px;
-  margin: 0;    
-  background: rgba(91,28,12,0.35);
-  border-radius: 9px;
-  padding: 16px 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h2{
+  font-family: "GenWanMin"; 
+  font-style: normal;
+  text-align: center;
+  font-size: 48px;
+  margin-top: -5px;
 }
+
 
 .intro summary{
   cursor: pointer;
   font-weight: 600;
-  font-size: 21px;
+  font-size: 24px;
+  color: #75220c;
+  font-family: "Inika", serif;
+  font-style: normal
 }
+
+
 
 .intro p{
   line-height: 1.5;
-  font-size: 16px;
+  font-size: 19px;
+  color: #75220c;
+  font-family: "Inika", serif;
+  font-weight: 400;
+  font-style: normal
 }
 
 .intro arrow {
@@ -44,7 +58,7 @@ body {
 
 
 
-.listPanel{
+.list{
   position: relative;
   width: 60px;       
   height: 80vh;
@@ -53,14 +67,14 @@ body {
 
 }
 
-.charCard{
+.character{
   display: grid;
   gap: 12px;
   align-items: center;
   margin-bottom: 14px;
 }
 
-.charBox{
+.pinyin{
   height: 25px;
   top:180px;
   border-radius: 7px;
@@ -68,15 +82,20 @@ body {
   display: grid;
   place-items: center;
   font-size: 18px;
+    font-family: "Inika", serif;
+  font-style: normal
 }
 
-.infoBox{
+.characterChinese{
   height: 60px;
   top:190px;
   border-radius: 9px;
   background: rgba(255,255,255,0.65);
   padding: 20px 20px;
   font-size: 50px;
+   font-family: "GenWanMin"; 
+  color: black
+ 
 }
 
 .definition-box{
@@ -86,18 +105,78 @@ body {
   padding:58px;
   border-radius: 9px;
   position:absolute;
-  left:170px;
-  top:180px;
+  left:185px;
+  top:10px;
+  font-size: 18px;
+}
+
+.language-corner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: scale(0.25);
+  transform-origin: top right;
+  pointer-events: none;
+  z-index: 2;
 }
 
 .language{
- width:1px;
-  height: 1px;
-  background-color: rgba(200,216,198);
-  padding:58px;
-  border-radius: 9px;
-  position:absolute;
-  right:20px;
+  position: fixed;
+  background-color: rgba(0);
+  padding:6px 10px;
+  border-radius: 6px;
+  /*position:absolute;*/
+  color:#ECEEE3;
+  right:10px;
   top:20px;
+  font-family: "GenWanMin";
+  z-index: 3;
+  
+cursor: pointer;
+  font-size: 13px;
+  opacity: 0.85;
+  transition: background-color 0.1s ease;
 }
 
+.language:hover {
+  background-color: rgba(52,13,3);
+}
+
+.grids {
+  position: absolute;
+  align-content: center;
+  top:75px;
+  left:490px;
+  transform: scale(2.9);
+  pointer-events: none;
+  z-index: 1;
+  opacity:0.8;
+}
+
+
+.model-text{
+  display:flex;
+  align-content:center;
+  margin-top: -290px;
+  margin-left: 680px;
+  font-family: "Inika", serif;
+  font-size: 24px;
+  padding:16px 20px;
+  
+}
+
+.intro-text{
+  display: flex;
+  align-content: center;
+  margin-top: 170px;
+  margin-left: 50px;
+  margin-right: 50px;
+  
+}
+
+.highlight{
+  background: linear-gradient(
+    transparent 5%,
+    rgba(94,119,89) 100%);
+  padding: 0 1px; 
+}
