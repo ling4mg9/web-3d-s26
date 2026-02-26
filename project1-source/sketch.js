@@ -42,7 +42,7 @@ function draw() {
     rotateX(-180);
     texture(myTexture);
     model(myShape);
-   filter(BLUR, 23);
+   filter(BLUR, 19);
     //filter(INVERT);
 
 }

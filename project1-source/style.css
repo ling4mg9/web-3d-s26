@@ -9,6 +9,7 @@
 }
 
 
+/*
 body {
     background-color: #010722
 }
@@ -43,4 +44,53 @@ cursor: pointer;
 
 div.language:hover {
   background-color: rgba(52,13,3);
+}*/
+
+
+div.grid-bg{
+   position: fixed;
+  transform: scale(1.25);
+  pointer-events: none;
+  z-index: 1;
+   left: 30%;
+    top: 4%;
+
+}
+
+div.pinyin{
+    position: fixed;
+ top: 89px;
+left: 48.5%;
+  /*
+  display: grid;
+  place-items: center;
+  */
+  font-size: 90px;
+    font-family: "Inika", serif;
+  /*font-style: normal;*/
+ color:#ECEEE3;
+}
+
+div.chineseCharacter{
+      position: fixed;
+ top: 259px;
+left: 39.5%;
+  font-size: 320px;
+   font-family: "GenWanMin"; 
+  color: white;
+}
+
+div.detail{
+    position: fixed;
+      width: 760px;
+  height: 140px;
+  top: 680px;
+    left:24%;
+  border-radius: 15px;
+  background: #6E7E6D;
+  padding: 17px 17px;
+    /*opacity: 50%;*/
+      font-size: 16px;
+   font-family: "Inika"; 
+  color: white;
 }

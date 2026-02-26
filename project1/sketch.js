@@ -117,7 +117,7 @@ function mousePressed() {
 }
 
 function detailPage() {
-    window.open("https://editor.p5js.org/evanpeck/sketches/BkNZ0VPCM");
+    window.open("https://ling4mg9.github.io/web-3d-s26/project1-source/");
 }
 
 function playMusic(){
