@@ -1,0 +1,46 @@
+@import url(https://fonts.googleapis.com/css2?family=Inika:wght@400;700&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Felipa&family=Inika:wght@400;700&display=swap');
+
+@font-face {
+  font-family: GenWanMin; 
+  src: url('./GenWanMin.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+    background-color: #010722
+}
+
+img.language-corner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: scale(0.25);
+  transform-origin: top right;
+  pointer-events: none;
+  z-index: 2;
+}
+
+div.language{
+  position: fixed;
+  background-color: rgba(0);
+  padding:6px 10px;
+  border-radius: 6px;
+  position:absolute;
+  color:#ECEEE3;
+  right:10px;
+  top:20px;
+  font-family: "GenWanMin";
+  z-index: 3;
+  
+cursor: pointer;
+  font-size: 13px;
+  opacity: 0.85;
+  transition: background-color 0.1s ease;
+}
+
+div.language:hover {
+  background-color: rgba(52,13,3);
+}
