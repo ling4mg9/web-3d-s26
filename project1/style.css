@@ -179,15 +179,18 @@ div.grids {
 }
 */
 
-
+div.wrap{
+  display: flex;
+align-content: center;
+}
 div.model-text{
-  display:flex;
+  flex: 50%;
   align-content:center;
-  margin-top: -290px;
-  margin-left: 680px;
+  /*margin-top: 290px;*/
+  /*margin-left: 680px;*/
   font-family: "Inika", serif;
   font-size: 24px;
-  padding:16px 20px;
+  /*padding:16px 20px;*/
   
 }
 
@@ -222,15 +225,19 @@ div#button-holder button {
 
 }
 
+div#sketch-holder {
+  flex: 50%;
+}
+
 div#button-holder button:hover {  
   background-color: rgba(52,13,3);
    color: #ae7d70;
   
 }
 
-div#button-holder button:active {
+/*div#button-holder button:active {*/
   
-}
+/*}*/
 
 div.overlay{
   display: flex;
@@ -240,6 +247,7 @@ div.overlay{
 
 
 /* The switch box around the slider */
+/*
 div#switch {
   left:20px;
   top:20px;
@@ -248,15 +256,19 @@ div#switch {
   width: 52px;
   height: 28px;
 }
+*/
 
 /* Hide default HTML checkbox */
+/*
 div#switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
+*/
 
 /* The slider */
+/*
 .slider {
   position: absolute;
   cursor: pointer;
@@ -265,12 +277,14 @@ div#switch input {
   right: 0;
   bottom: 0;
   background-color: #2b345e; 
-  /*before-square on left*/
+  before-square on left
   -webkit-transition: .4s;
   transition: .4s;
 }
+*/
 
 /*slider square*/
+/*
 .slider:before {
   position: absolute;
   content: "♪♫";
@@ -282,16 +296,20 @@ background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
+*/
 
-/*after-sqaure on right*/
+/*
+after-sqaure on right
 input:checked + .slider {
   background-color: #b5b7c2;
 }
+*/
 
 
+/*
 input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
   
-}
+}*/

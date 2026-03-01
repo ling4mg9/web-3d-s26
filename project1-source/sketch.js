@@ -11,7 +11,7 @@ function preload() {
      myTexture = loadImage("tex1.jpg");
 }
 function setup() {
-  let canvas = createCanvas(windowWidth,windowHeight, WEBGL);
+  let canvas = createCanvas(windowWidth, windowHeight, WEBGL);
     angleMode(DEGREES);
 
 

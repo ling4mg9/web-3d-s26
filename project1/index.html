@@ -1,85 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <title>Title</title>
-        
-       
-        
+
         <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/addons/p5.sound.min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script src="sketch.js"></script>
     </head>
     <body>
+            
+        <img src="language-corner.png" class="language-corner" alt="" />
+        <div class="language">中/Eng</div>
+
         
-        
-     <img src="language-corner.png" class="language-corner" alt=""> 
-        
-        <div class="language">
-        中/Eng
-        </div>
+        <!-- Rectangular switch -->
+<!--
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider"></span>
+</label>
+-->
+
         
         
         <h1>Gendered Violence in Chinese Characters</h1>
         <h2>汉字中的性别暴力</h2>
         
-        <div id="sketch-holder"></div>
-        
-        
+        <div class="wrap">
+         <div id="sketch-holder"></div>
         <div class="model-text">
-            <div id="sketch-holder2"></div>
-        <p>A collections of the Chinese characters that encode gender bias, particularly the ones related to women. </p>
-         </div>
-        
+            
+            <p>
+                A collections of the Chinese characters that encode gender bias, particularly the ones related to women.
+            </p>
+        </div>
+            </div>
+       
+
         <!--<img src="grids.png" class="grids" alt="">-->
 
-<div class="intro-text">
-    <div id="sketch-holder3"></div>
+        <div class="intro-text">
+        
 
-		
-        <details class="intro" open>
-            <summary>Introuction</summary>
-            <p>Chinese characters are not abstract letters.They are built from visible parts, each carrying meaning.
-            </p>
-            <p>The radical  <span class="highlight">“女”means "woman."</span> It is also used as a building block inside many other characters.</p>
-            <p>This same component repeatedly appears in words with <span class="highlight">negative meanings</span> which reflect cultural bias. There are many more characters follow the same pattern. Even neutral words related to women have been <span class="highlight">systematically stigmatized over time</span>. </p>
-        <p>This site collects the Chinese characters that encode gender bias, particularly the ones related to women. For each character, the site will present: their meanings, historical origin (if available), and possible alternative characters (if available).</p>
-        </details>  
-            </div>
-            
-  <div class="overlay">
-<div class="list">
+            <details class="intro" open>
+                <summary>Introuction</summary>
+                <p>
+                    Chinese characters are not abstract letters.They are built from visible parts, each carrying
+                    meaning.
+                </p>
+                <p>
+                    The radical <span class="highlight">“女”means "woman."</span> It is also used as a building block
+                    inside many other characters.
+                </p>
+                <p>
+                    This same component repeatedly appears in words with
+                    <span class="highlight">negative meanings</span> which reflect cultural bias. There are many more
+                    characters follow the same pattern. Even neutral words related to women have been
+                    <span class="highlight">systematically stigmatized over time</span>.
+                </p>
+                <p>
+                    This site collects the Chinese characters that encode gender bias, particularly the ones related to
+                    women. For each character, the site will present: their meanings, historical origin (if available),
+                    and possible alternative characters (if available).
+                </p>
+            </details>
+        </div>
 
-  
-    <div class="pinyin">jí</div>
-      <div class="character">
-
-    <div class="characterChinese">
- 
-        <p class="hanzi">嫉</p>
-      <!--
+        <div class="overlay">
+            <div class="list">
+                <div class="pinyin">jí</div>
+                <div class="character">
+                    <div class="characterChinese">
+                        <p class="hanzi">嫉</p>
+                        <!--
       <div class="definition-box"> 
         <p class="definition">jealousy / to be jealous of</p></div>
       </div>
       -->
-  </div>
-               <div id="button-holder"></div>
-    </div>
- </div>
-</div>
-            
-        
-<div class="references">References <br>
-        <a href="https://womany.net/read/article/32545">Are there also stereotypes and gender-based violence in Chinese characters? They use "Nushu" and "Women's Words" to write language articles exclusively for women</a>
-       <br>
-    <a href="https://www.mdbg.net/chinese/dictionary">Chinese-English Dictionary</a>
-      <br>
-    <a href="https://cn.nytimes.com/china/20151204/c04chinajian/zh-hant/">漢字里的性別暴力與文化偏見</a>
-        
-        
-        </div>       
+                    </div>
+                    <div id="button-holder"></div>
+                </div>
+            </div>
+        </div>
 
+        <div class="references">
+            References <br />
+            <a href="https://womany.net/read/article/32545"
+                >Are there also stereotypes and gender-based violence in Chinese characters? They use "Nushu" and
+                "Women's Words" to write language articles exclusively for women</a
+            >
+            <br />
+            <a href="https://www.mdbg.net/chinese/dictionary">Chinese-English Dictionary</a>
+            <br />
+            <a href="https://cn.nytimes.com/china/20151204/c04chinajian/zh-hant/">漢字里的性別暴力與文化偏見</a>
+        </div>
     </body>
-    
 </html>

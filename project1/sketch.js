@@ -1,4 +1,3 @@
-//var song;
 let myShape;
 let textures = [];
 let currentTex;
@@ -8,15 +7,6 @@ let gapNum = 50;
 let movingCheck = false;
 var button;
 
-//function playMusic(){
-//     userStartAudio();
-//  if ( song.isPlaying() ) {
-//    song.pause();
-//  } else {
-//    song.play();
-//  }
-
-//}
 
 function preload() {
     myShape = loadModel("nv-3d.obj", true);
@@ -55,8 +45,7 @@ function setup() {
   button.mousePressed(detailPage);
     
         
-    let buttonB = createButton('Play Music');
-    buttonB.mousePressed(playMusic);
+
 
     //buttonA.mousePressed(detailPage);
 //
@@ -120,12 +109,4 @@ function detailPage() {
     window.open("https://ling4mg9.github.io/web-3d-s26/project1-source/");
 }
 
-function playMusic(){
-     userStartAudio();
-  if ( song.isPlaying() ) { 
-    song.pause();
-  } else {
-    song.play();
-  }
 
-}
