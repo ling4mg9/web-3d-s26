@@ -240,9 +240,20 @@ div#button-holder button:hover {
 /*}*/
 
 div.overlay{
+  height: 100px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  flex: 50%
+  flex: 50%;
+  padding-top: 30px;
+}
+
+div.references{
+  left: 30px;
+  position:relative;
+  top: 20px;
+  padding-top: 20px;
+  
 }
 
 
