@@ -60,10 +60,10 @@ div.intro arrow {
 
 div.list{
   position: relative;
-  width: 60px;       
-  height: 80vh;
-  margin: 10vh 0 0 60px;  
-  /*top,right,bottom,left */
+  width:auto;       
+  height: auto;
+top: 50px;
+
 
 }
 
@@ -210,11 +210,12 @@ div.highlight{
   padding: 0 1px; 
 }
 
-div#button-holder button {
+div#button-holder1 button {
     width:320px;
-  height: 13px;
+  /*height: 13px;*/
+  
   background-color: rgba(200,216,198,0.65);
-  padding:58px;
+  padding:40px;
   border-radius: 9px;
   position:relative;
   /*left:178px;*/
@@ -229,24 +230,407 @@ div#sketch-holder {
   flex: 50%;
 }
 
-div#button-holder button:hover {  
+div#button-holder1 button:hover {  
   background-color: rgba(52,13,3);
    color: #ae7d70;
   
 }
 
-/*div#button-holder button:active {*/
+div#button-holder2 button{
+  width:320px;
+  /*height: 13px;*/
   
-/*}*/
+  background-color: rgba(200,216,198,0.65);
+  padding:30px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+
+}
+
+
+div#button-holder2 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+  
+}
+
+div#button-holder3 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder3 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder4 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:30px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder4 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder5 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder5 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+div#button-holder6 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:30px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder6 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder7 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder7 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder8 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:30px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder8 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+div#button-holder9 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder9 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder10 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder10 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder11 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder11 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder12 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder12 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder13 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder13 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder14 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder14 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder15 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder15 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder16 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder16 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder17 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder17 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder18 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:30px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder18 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
+
+div#button-holder19 button{
+    width:320px;
+  /*height: 13px;*/
+  
+  background-color: rgba(200,216,198,0.65);
+  padding:40px;
+  border-radius: 9px;
+  position:relative;
+  /*left:178px;*/
+  top:-25px;
+  font-size: 19px;
+  cursor: pointer;
+   font-family: "Inika", serif;
+}
+
+
+div#button-holder19 button:hover {  
+  background-color: rgba(52,13,3);
+   color: #ae7d70;
+}
 
 div.overlay{
+  /*
   height: 100px;
   position: relative;
   display: flex;
   flex-direction: column;
   flex: 50%;
   padding-top: 30px;
+  */
+display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+ column-gap: 28px; 
+  row-gap: 12px;
+
 }
+
+
 
 div.references{
   left: 30px;
@@ -256,71 +640,3 @@ div.references{
   
 }
 
-
-/* The switch box around the slider */
-/*
-div#switch {
-  left:20px;
-  top:20px;
-   position: fixed;
-  display: inline-block;
-  width: 52px;
-  height: 28px;
-}
-*/
-
-/* Hide default HTML checkbox */
-/*
-div#switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-*/
-
-/* The slider */
-/*
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #2b345e; 
-  before-square on left
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-*/
-
-/*slider square*/
-/*
-.slider:before {
-  position: absolute;
-  content: "♪♫";
-  height: 20px;
-  width: 20px;
-  left: 3px;
-  bottom: 4px;
-background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-*/
-
-/*
-after-sqaure on right
-input:checked + .slider {
-  background-color: #b5b7c2;
-}
-*/
-
-
-/*
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-  
-}*/
