@@ -90,28 +90,28 @@ function setup() {
     let buttonM = createButton("slave girl/maid servant");
     buttonM.parent("button-holder13");
     buttonM.mousePressed(detailPage13);
-    
+
     let buttonN = createButton("slave/servant");
     buttonN.parent("button-holder14");
     buttonN.mousePressed(detailPage14);
-    
-        let buttonO = createButton("prostitute/harlot");
+
+    let buttonO = createButton("prostitute/harlot");
     buttonO.parent("button-holder15");
     buttonO.mousePressed(detailPage15);
-    
-            let buttonP = createButton("jealous/envious");
+
+    let buttonP = createButton("jealous/envious");
     buttonP.parent("button-holder16");
     buttonP.mousePressed(detailPage16);
-    
-                let buttonQ = createButton("to visit a prostitute");
+
+    let buttonQ = createButton("to visit a prostitute");
     buttonQ.parent("button-holder17");
     buttonQ.mousePressed(detailPage17);
-    
-                    let buttonR = createButton("to be a mistress or lover/illicit sexual relations");
+
+    let buttonR = createButton("to be a mistress or lover/illicit sexual relations");
     buttonR.parent("button-holder18");
     buttonR.mousePressed(detailPage18);
-    
-                        let buttonS = createButton("obscene/licentious/lewd");
+
+    let buttonS = createButton("obscene/licentious/lewd");
     buttonS.parent("button-holder19");
     buttonS.mousePressed(detailPage19);
 }
@@ -157,7 +157,7 @@ function mousePressed() {
 }
 
 function detailPage() {
-    window.open("https://ling4mg9.github.io/web-3d-s26/project1-source/");
+    window.open("https://ling4mg9.github.io/web-3d-s26/project1-source1/");
 }
 
 function detailPage2() {}
