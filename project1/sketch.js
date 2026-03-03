@@ -157,7 +157,7 @@ function mousePressed() {
 }
 
 function detailPage() {
-    window.open("https://ling4mg9.github.io/web-3d-s26/project1-source1/");
+    window.open("https://ling4mg9.github.io/web-3d-s26/project1-source/");
 }
 
 function detailPage2() {}

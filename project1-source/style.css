@@ -56,13 +56,13 @@ div.grid-bg {
 
 div.pinyin {
     position: absolute;
-    top: 89px;
+    top: 122px;
     left: 48.5%;
     /*
   display: grid;
   place-items: center;
   */
-    font-size: 90px;
+    font-size: 80px;
     font-family: "Inika", serif;
     /*font-style: normal;*/
     color: #eceee3;
@@ -71,8 +71,8 @@ div.pinyin {
 div.chineseCharacter {
     position: absolute;
     top: 259px;
-    left: 39.5%;
-    font-size: 320px;
+    left: 41.5%;
+    font-size: 260px;
     font-family: "GenWanMin";
     color: white;
 }
@@ -80,13 +80,13 @@ div.chineseCharacter {
 div.detail {
     position: absolute;
     width: 760px;
-    height: 140px;
-    top: 680px;
+    height: 100px;
+    top: 600px;
     left: 25%;
     border-radius: 15px;
     background: #6e7e6d;
     padding: 17px 17px;
-    /*opacity: 50%;*/
+    /*opacity: 88%;*/
     font-size: 16px;
     font-family: "Inika";
     color: white;
