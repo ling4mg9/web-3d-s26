@@ -1,18 +1,16 @@
 @font-face {
- font-family: 'Bitcount Single';
- src: url("./BitcountSingle-Light.ttf") format('truetype');
+  font-family: "Bitcount Single";
+  src: url("./BitcountSingle-Light.ttf") format("truetype");
 }
 
 body {
-    background: black;
-    color: white;
+  background: black;
+  color: white;
 }
 
 main {
-  padding-left: 10%;
-  padding-right: 10%;
-  max-width: 800px;
-  margin: auto;
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
@@ -50,7 +48,8 @@ h2 {
   color: lightgray;
 }
 
-p, ul {
+p,
+ul {
   font-family: "Cascadia Code", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -62,7 +61,7 @@ a {
 }
 
 a:visited {
-  color: deeppink
+  color: deeppink;
 }
 
 canvas {
@@ -70,3 +69,24 @@ canvas {
   margin: auto;
   padding-bottom: 20px;
 }
+
+	#blocker {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,0.5);
+			}
+
+			#instructions {
+				width: 100%;
+				height: 100%;
+
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				text-align: center;
+				font-size: 14px;
+				cursor: pointer;
+			}
