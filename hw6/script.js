@@ -1,4 +1,4 @@
-// Basic Three.js Example
+// Images and 3D Font Example Three.js Example
 // Chelsea Thompto - Spring 2026
 
 // Three.js uses an import map to add features.
@@ -8,12 +8,11 @@
 // The main library script
 import * as THREE from "three";
 
-// The plug-in for orbit controls
-import { OrbitControls } from "./src/OrbitControls.js";
-import { FontLoader } from "./src/FontLoader.js";
-
-// The plug-in for First Person Controls
+// The plug-ins
 import { PointerLockControls } from "./src/PointerLockControls.js";
+import { Font } from "./src/FontLoader.js";
+import { TTFLoader } from "./src/TTFLoader.js";
+import { TextGeometry } from "./src/TextGeometry.js";
 
 // Declaring global variables.
 let camera, canvas, controls, scene, renderer;
@@ -30,6 +29,14 @@ let prevTime = performance.now();
 const velocity = new THREE.Vector3();
 const direction = new THREE.Vector3();
 
+let font;
+let text = "March 26 Demo";
+let textGeo;
+let materials;
+let textMesh1;
+let textMesh2;
+let group;
+
 // Run the "init" function which is like "setup" in p5.
 init();
 
@@ -38,7 +45,7 @@ function init() {
     // scene setup
     canvas = document.getElementById("3-holder");
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xbfeff5);
+    scene.background = new THREE.Color(0x000000);
     scene.fog = new THREE.FogExp2(0xbfeff5, 0.0015);
     renderer = new THREE.WebGLRenderer({ antialias: true });
     //renderer.setPixelRatio( window.devicePixelRatio );
@@ -49,17 +56,6 @@ function init() {
     // Setup camera
     camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
     camera.position.set(0, 10, 0);
-
-    // Setup Orbit Controls
-    //controls = new OrbitControls( camera, renderer.domElement );
-    //controls.listenToKeyEvents( window );
-    //controls.enableDamping = true;
-    //controls.dampingFactor = 0.05;
-    //controls.screenSpacePanning = false;
-    //controls.minDistance = 100;
-    //controls.maxDistance = 500;
-    //controls.cursorStyle = 'grab';
-    //controls.maxPolarAngle = Math.PI / 2;
 
     // Setup First Person Controls
     // DO NOT TOUCH
@@ -143,82 +139,88 @@ function init() {
 
     raycaster = new THREE.Raycaster(new THREE.Vector3(), new THREE.Vector3(0, -1, 0), 0, 10);
 
-    ////add font and text
-    //const loader = new FontLoader();
-    //loader.load("./ChangeOne.json", function (font) {
-    //    //create color and material
-    //    const color = 0x006699;
-    //    const matDark = new THREE.LineBasicMaterial({
-    //        color: color,
-    //        side: THREE.DoubleSide
-    //    });
-//
-    //    const matLite = new THREE.MeshBasicMaterial({
-    //        color: color,
-    //        transparent: true,
-    //        opacity: 0.4,
-    //        side: THREE.DoubleSide
-    //    });
-//
-    //    //create message text
-    //    const message = "Tuesday March 24\nDemo";
-//
-    //    //create shapes from font and message
-    //    const shapes = font.generateShapes(message, 100);
-    //    const fontGeo = new THREE.ShapeGeometry(shapes);
-    //    fontGeo.computeBoundingBox();
-
-
-        ////center alignment
-        //const xMid = -0.5 * (fontGeo.boundingBox.max.x - fontGeo.boundingBox.min.x);
-        //textGeometry.translate(xMid, 0, 0);
-//
-        ////add object to scene
-        //const text = new THREE.Mesh(fontGeo, matLite);
-        //text.position.z = 100;
-        //scene.add(text);
-    //});
-    
-    
-    
-    
-      //donut shape
-        const donut = new THREE.TorusGeometry(50, 20, 20, 100);
-    
-        //donut solid color
-        const donutMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
-        const torus = new THREE.Mesh(donut, donutMaterial);
-        torus.position.z = -250;
-        torus.position.y = 50;
-        scene.add(torus);
-    
-        // donut line color
-        const donutLine = new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true });
-        const torusLine = new THREE.Mesh(donut, donutLine);
-        torusLine.position.z = -250;
-        torusLine.position.y = 50;
-        scene.add(torusLine);
     // End First Person Controls
 
     // Add world geometry
+    
 
-    // Grouping of trees
-    const geometry = new THREE.ConeGeometry(10, 60, 8, 1);
-    const material = new THREE.MeshPhongMaterial({ color: 0x14401e, flatShading: true });
-    const mesh = new THREE.InstancedMesh(geometry, material, 500);
+
+    
+//boxes
+     const geometry = new THREE.BoxGeometry( 10, 10, 10);
+const material = new THREE.MeshBasicMaterial({ color: 0xffffff });
+    const mesh = new THREE.InstancedMesh( geometry, material, 500 );
     const tree = new THREE.Object3D();
-    for (let i = 0; i < 75; i++) {
+    for ( let i = 0; i < 75; i ++ ) {
         tree.position.x = Math.random() * 250 - 125;
         tree.position.y = 0;
         tree.position.z = Math.random() * 250 - 125;
         tree.updateMatrix();
-        mesh.setMatrixAt(i, tree.matrix);
+        mesh.setMatrixAt( i, tree.matrix );
     }
-    scene.add(mesh);
+    scene.add( mesh );
+    
+        ////sphere
+    const geometry2 = new THREE.SphereGeometry(20, 2, 80);
+const material2 = new THREE.MeshBasicMaterial({ color: 0x9e0000 });
+const sphereMesh = new THREE.Mesh(geometry2, material2);
+sphereMesh.material.transparent = true;
+sphereMesh.material.opacity = 0.5;
+sphereMesh.position.set(0, 100, -200);
+scene.add(sphereMesh);
+    
+    //ring
+        const geometry3 = new THREE.RingGeometry(20, 2, 80);
+const material3 = new THREE.MeshBasicMaterial({ color: 0x289e00 });
+const ringMesh = new THREE.Mesh(geometry3, material3);
+ringMesh.position.set(0, 100, -200);
+scene.add(ringMesh);
+    
+    
+    // text
+
+    // materials for the text
+    materials = [
+        new THREE.MeshPhongMaterial({ color: 0x10b10c, flatShading: true }), // front
+        new THREE.MeshPhongMaterial({ color: 0x0c9909 }) // side
+    ];
+
+    // establish font loader
+    const loader = new TTFLoader();
+
+    // use loader with desired ttf font
+    loader.load("./CourierPrime-Bold.ttf", function (json) {
+        font = new Font(json);
+        // see create text function below
+        createText();
+    });
+
+    // add resulting shapes to scene
+    group = new THREE.Group();
+    group.position.y = 100;
+
+    scene.add(group);
+
+    // image
+
+    // load image as a texture
+    //const imgSource = new THREE.TextureLoader().load("./cab-curio-1.jpg");
+    //// use loaded testure in a material
+    //const imgMaterial = new THREE.MeshBasicMaterial({
+    //    map: imgSource,
+    //    side: THREE.DoubleSide,
+    //    transparent: true
+    //});
+    // create image shape (should be the same aspect ratio as the image)
+    const imgGeometry = new THREE.PlaneGeometry(400, 300);
+    // apply image to shape and add to scene
+    const imgPlane = new THREE.Mesh(imgGeometry, imgMaterial);
+    imgPlane.position.set(0, 100, -400);
+    scene.add(imgPlane);
 
     // Ground
-    const earth = new THREE.PlaneGeometry(2000, 2000);
-    const ground = new THREE.MeshPhongMaterial({ color: 0x402314, flatShading: true });
+    const earth = new THREE.PlaneGeometry(4000, 4000);
+    const ground = new THREE.MeshPhongMaterial({ color: 0xe10dee, flatShading: true });
     const mesh2 = new THREE.InstancedMesh(earth, ground, 500);
     mesh2.translateY(-60);
     mesh2.rotateX(-1.5708);
@@ -280,3 +282,35 @@ function animate() {
 function render() {
     renderer.render(scene, camera);
 }
+
+// Function to generate text shapes
+//function createText() {
+//    // create geomtery with parameters, change parameters to test modifications
+//    // "text" on next line is the message to be written
+//    textGeo = new TextGeometry(text, {
+//        font: font,
+//        size: 20,
+//        depth: 10,
+//        curveSegments: 4,
+//        bevelThickness: 2,
+//        bevelSize: 1.5,
+//        bevelEnabled: true
+//    });
+//
+//    // finish making geometry
+//    textGeo.computeBoundingBox();
+//    const centerOffset = -0.5 * (textGeo.boundingBox.max.x - textGeo.boundingBox.min.x);
+//
+//    // apply material to geometry
+//    textMesh1 = new THREE.Mesh(textGeo, materials);
+//
+//    // set position and rotation
+//    textMesh1.position.x = centerOffset;
+//    textMesh1.position.z = -200;
+//    textMesh1.position.y = -100;
+//    textMesh1.rotation.x = 0;
+//    textMesh1.rotation.y = Math.PI * 2;
+//
+//    // add to group to be added to scene
+//    group.add(textMesh1);
+//}
