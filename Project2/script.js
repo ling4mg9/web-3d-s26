@@ -42,7 +42,10 @@ let sphere;
 let sphere1;
 let sphere2;
 let sphere3;
+let sphere4;
 let sphere5;
+let sphere6;
+let sphere7;
 
 // Run the "init" function which is like "setup" in p5.
 init();
@@ -325,9 +328,9 @@ function init() {
     const material4 = new THREE.MeshStandardMaterial({
         map: texture4
     });
-    const geometry4 = new THREE.SphereGeometry(200, 64, 94);
-    const sphere4 = new THREE.Mesh(geometry4, material4);
-    sphere4.position.set(780, 12.5, -540);
+    const geometry4 = new THREE.SphereGeometry(20, 64, 94);
+    sphere4 = new THREE.Mesh(geometry4, material4);
+    sphere4.position.set(670, 7.5, -540);
     sphere4.scale.set(1, 1, 1);
     scene.add(sphere4);
 
@@ -341,20 +344,16 @@ function init() {
     sphere5.position.set(300, 40, -650);
     sphere5.scale.set(1, 1, 1);
     scene.add(sphere5);
-    //const sphere5 = new THREE.Mesh(geometry5, material5);
-    //sphere5.position.set(300, 40, -650);
-    //sphere5.scale.set(1,1,1);
-    //scene.add(sphere5);
 
     //sphere6
     const texture6 = new THREE.TextureLoader().load("./images/7.webp");
     const material6 = new THREE.MeshStandardMaterial({
         map: texture6
     });
-    const geometry6 = new THREE.SphereGeometry(19, 39, 74, 10);
-    const sphere6 = new THREE.Mesh(geometry6, material6);
-    sphere6.position.set(140, 40, -100);
-    sphere6.scale.set(3, 2.9, 2.8);
+    const geometry6 = new THREE.SphereGeometry(160, 39, 74);
+    sphere6 = new THREE.Mesh(geometry6, material6);
+    sphere6.position.set(540, 90, -20);
+    sphere6.scale.set(1, 1, 1);
     scene.add(sphere6);
 
     //sphere7
@@ -362,11 +361,18 @@ function init() {
     const material7 = new THREE.MeshStandardMaterial({
         map: texture7
     });
-    const geometry7 = new THREE.SphereGeometry(19, 39, 74, 10);
-    const sphere7 = new THREE.Mesh(geometry7, material7);
+    const geometry7 = new THREE.SphereGeometry(40, 39, 74);
+    sphere7 = new THREE.Mesh(geometry7, material7);
     sphere7.position.set(-140, 140, -60);
-    sphere7.scale.set(3, 2.9, 2.8);
+    sphere7.scale.set(0.85, 1.2, 0.85);
     scene.add(sphere7);
+
+    //balloon string
+    const stringGeo = new THREE.CylinderGeometry(0.15, 0.15, 180, 8);
+    const stringMat = new THREE.MeshStandardMaterial({ color: 0x89379a });
+    const string = new THREE.Mesh(stringGeo, stringMat);
+    string.position.set(-140, 10, -60);
+    scene.add(string);
 
     //stair
     const stair = new THREE.MeshPhongMaterial({ color: 0xfff4ce });
@@ -693,20 +699,51 @@ function init() {
     imgPlane3.rotation.z = Math.PI * 0.03;
     scene.add(imgPlane3);
 
-    ////home icon
+    ////home icon1
     const imgSource7 = new THREE.TextureLoader().load("./home.png");
     const imgMaterial7 = new THREE.MeshPhongMaterial({
         map: imgSource7,
         transparent: true,
-opacity: 0.5,
+        opacity: 0.5,
+        emissive: 0xff9797,
+        side: THREE.DoubleSide
+    });
+    const imgGeometry7 = new THREE.PlaneGeometry(1350, 1104);
+    const imgPlane7 = new THREE.Mesh(imgGeometry7, imgMaterial7);
+    imgPlane7.position.set(200, 380, 200);
+    imgPlane7.scale.set(1.2, 1, 1);
+    scene.add(imgPlane7);
+
+    ////home icon2
+    const imgSource8 = new THREE.TextureLoader().load("./home.png");
+    const imgMaterial8 = new THREE.MeshPhongMaterial({
+        map: imgSource8,
+        transparent: true,
+        opacity: 0.4,
+        emissive: 0x36fff3,
+        side: THREE.DoubleSide
+    });
+    const imgGeometry8 = new THREE.PlaneGeometry(1350, 1104);
+    const imgPlane8 = new THREE.Mesh(imgGeometry8, imgMaterial8);
+    imgPlane8.position.set(190, 376, 185);
+    imgPlane8.scale.set(1.2, 1, 1);
+    scene.add(imgPlane8);
+
+    ////home icon3
+    const imgSource9 = new THREE.TextureLoader().load("./home.png");
+    const imgMaterial9 = new THREE.MeshPhongMaterial({
+        map: imgSource9,
+        transparent: true,
+        opacity: 0.4,
         emissive: 0xfdff97,
         side: THREE.DoubleSide
     });
-    const imgGeometry7 = new THREE.PlaneGeometry(1350,1104);
-    const imgPlane7 = new THREE.Mesh(imgGeometry7, imgMaterial7);
-    imgPlane7.position.set(200, 380, 200);
-    scene.add(imgPlane7);
-    
+    const imgGeometry9 = new THREE.PlaneGeometry(1350, 1104);
+    const imgPlane9 = new THREE.Mesh(imgGeometry9, imgMaterial9);
+    imgPlane9.position.set(180, 384, 192);
+    imgPlane9.scale.set(1.2, 1, 1);
+    scene.add(imgPlane9);
+
     ////image question mark 1
     const imgSource4 = new THREE.TextureLoader().load("./question_mark.png");
     const imgMaterial4 = new THREE.MeshStandardMaterial({
@@ -781,7 +818,7 @@ function animate() {
         sphere.rotation.x += 0.008;
     }
     if (sphere1) {
-        sphere1.rotation.y += 0.004;
+        sphere1.rotation.y += 0.008;
         //sphere3.rotation.x += 0.008;
     }
     if (sphere2) {
@@ -793,10 +830,24 @@ function animate() {
         sphere3.rotation.y += 0.009;
         sphere3.rotation.x += 0.002;
     }
+    if (sphere4) {
+        sphere4.rotation.y += 0.009;
+        sphere4.rotation.x += 0.001;
+    }
 
     if (sphere5) {
         sphere5.rotation.y += 0.009;
         sphere5.rotation.x += 0.002;
+    }
+
+    if (sphere6) {
+        sphere6.rotation.y += 0.01;
+        sphere6.rotation.x += 0.002;
+    }
+
+    if (sphere7) {
+        sphere7.rotation.y += 0.01;
+        //sphere7.rotation.x += 0.002;
     }
 
     if (controls.isLocked === true) {
@@ -878,7 +929,7 @@ function createText(targetGroup) {
     textGeo = new TextGeometry(text, {
         font: font,
         size: 30,
-        depth: 10,
+        depth: 13,
         curveSegments: 9,
         bevelThickness: 1,
         bevelSize: 1.5,
