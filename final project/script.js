@@ -322,26 +322,50 @@ function createText(targetGroup) {
     targetGroup.add(textMesh);
 }
 
-function newCube() {
-    const myShape = new THREE.BoxGeometry(5, 10, 0.2);
-  const randomColor = colors[Math.floor(Math.random() * colors.length)];
 
-const cubeMat = new THREE.MeshPhongMaterial({
-    color: randomColor,
+
+function newCube() {
+
+    const myShape = new THREE.BoxGeometry(5, 10, 0.2);
+
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+ const cubeMat = new THREE.MeshStandardMaterial({
+    emissive: randomColor,   
+    emissiveIntensity: 1.5,    
     transparent: true,
     opacity: 0.6
 });
 
     const myCube = new THREE.Mesh(myShape, cubeMat);
 
+
     myCube.position.copy(camera.position);
     myCube.rotation.copy(camera.rotation);
+
     myCube.updateMatrix();
+
     myCube.translateZ(-30);
 
     scene.add(myCube);
 
-  
-
     console.log("cube added");
+
+    // cube fade
+    setTimeout(() => {
+        let fade = setInterval(() => {
+
+            cubeMat.opacity -= 0.05;
+
+//float up
+            myCube.position.y += 0.1;
+myCube.position.x += 0.05;
+ myCube.position.z += 0.1;
+            if (cubeMat.opacity <= 0) {
+
+                clearInterval(fade);
+                scene.remove(myCube);
+            }
+        }, 5); }, 3000);
+
 }
